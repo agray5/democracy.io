@@ -3,7 +3,7 @@
  */
 
 var gulp = require('gulp');
-var runSequence = require('run-sequence');
+var runSequence = require('gulp4-run-sequence');
 
 
 var build = function(env) {

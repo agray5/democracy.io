@@ -4,7 +4,7 @@
 
 var gulp = require('gulp');
 var path = require('path');
-var runSequence = require('run-sequence');
+var runSequence = require('gulp4-run-sequence');
 var supervisor = require('gulp-supervisor');
 
 gulp.task('supervisor', function() {

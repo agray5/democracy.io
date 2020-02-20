@@ -16,8 +16,13 @@ gulp.task('appSettings', function() {
   appConfig['dioConfig']['MODE'] = config.get('MODE');
   appConfig['dioConfig']['VERSION'] = version;
 
-  return fs.mkdir(gulpConfig.BUILD_DIR, function() {
+  if (fs.existsSync(gulpConfig.BUILD_DIR)) return Promise.resolve('Success')
+  return fs.promises.mkdir(gulpConfig.BUILD_DIR).then(() => {
     fs.writeFileSync(gulpConfig.BUILD_DIR+'/'+'dio-app-settings.js',
+                     'module.exports = '+JSON.stringify(appConfig['dioConfig'])+';')
+  })
+  /*mkdir(gulpConfig.BUILD_DIR, function() {
+    return fs.writeFileSync(gulpConfig.BUILD_DIR+'/'+'dio-app-settings.js',
                      'module.exports = '+JSON.stringify(appConfig['dioConfig'])+';');
-  });
+  });*/
 });

@@ -11,7 +11,7 @@ var config = require('../config');
 var version = require('../../package.json').version;
 
 gulp.task('partials', function() {
-  gulp.src(path.join(config.WWW_DIR, 'partials/**/*.html'))
+  return gulp.src(path.join(config.WWW_DIR, 'partials/**/*.html'))
     .pipe(templateCache({
       filename: 'partials.js',
       module: 'democracyIoApp',
