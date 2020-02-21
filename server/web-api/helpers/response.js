@@ -1,4 +1,5 @@
 var makeResponse = function(data) {
+  console.log("RESPONSE", data);
   return {
     status: 'success',
     data: data

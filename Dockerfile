@@ -1,9 +1,11 @@
-FROM node:carbon-alpine
+FROM alpine:3.9
 
 RUN apk --update --no-cache add \
     build-base file autoconf make gcc g++ python \
     alpine-sdk automake autoconf make nasm gcc g++ zlib zlib-dev \
     libpng libpng-dev libwebp libwebp-dev libjpeg-turbo libjpeg-turbo-dev
+
+RUN apk add --update npm
 
 COPY package.json /tmp/package.json
 RUN cd /tmp \

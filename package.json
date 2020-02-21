@@ -53,7 +53,7 @@
     "minifyify": "^7.0.0",
     "numeral": "^1.5.3",
     "pretty-hrtime": "^1.0.0",
-    "require-dir": "^0.3.0",
+    "require-dir": "^0.3.2",
     "run-sequence": "^2.2.1",
     "supertest": "^3.4.2",
     "vinyl-source-stream": "^2.0.0",
